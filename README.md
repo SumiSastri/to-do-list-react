@@ -223,3 +223,62 @@ const Card = () => {
 
 export default Card;
 ```
+Create the cardList component with a map function to map through the cards - state can be used now in this component as well as the card component
+
+```
+import React from 'react';
+import Card from './card.js';
+
+const CardList = ({ todos }) => {
+	const cardComponent = todos.map((todo, i) => {
+		return (
+			<Card
+				key={i}
+				title={todos[i].title}
+				id={todos[i].id}
+				userId={todos[i].userId}
+				completed={todos[i].completed}
+			/>
+		);
+	});
+	return <div>{cardComponent}</div>;
+};
+
+export default CardList;
+```
+
+In the card component destructure the todos into individual properites 
+
+```
+import React from 'react';
+
+const Card = ({ title, userId, id, completed }) => {
+	return (
+		<div className="dib pa5 ma1 tc ba bw1 bg-light-blue">
+			<h2>{title}</h2>
+			<p>{userId}</p>
+			<p>{id}</p>
+			<p>{completed}</p>
+		</div>
+	);
+};
+
+export default Card;
+```
+
+To render all 200 in the list pass state in the render method
+
+```
+render() {
+		return (
+			<div className="App">
+				<h1>To Do App</h1>
+				<CardList todos={this.state.todos} />
+			</div>
+		);
+	}
+}
+export default App;
+```
+
+At this stage the completed prop will not work as it is a boolean and more work needs to be done. Change some of the styling quickly - smaller fonts, items as unordered lists. Retain the boxes and background until next step do some final styling at the end.

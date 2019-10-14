@@ -16,7 +16,7 @@ class App extends Component {
 			.then((todos) => {
 				// console.log(todos);
 				this.setState({ todos: todos });
-				console.log(this.state);
+				// console.log(this.state);
 			})
 			.catch((error) => console.log(error));
 	}
