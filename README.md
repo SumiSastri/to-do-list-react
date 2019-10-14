@@ -1,6 +1,7 @@
-### To do list 
+### To do list for EUROSTAR test
 
 An app that connects back-end data via an API to a React front-end
+![Eurostar-todo-list](src/frontend/assets/app-complete.png)
 
 ## Scaffolding and set up
 
@@ -223,6 +224,8 @@ const Card = () => {
 
 export default Card;
 ```
+Change the port on your server.js file to 3001 so that you can de-bug if either backend or frontend not working as intented
+
 Create the cardList component with a map function to map through the cards - state can be used now in this component as well as the card component
 
 ```
@@ -283,3 +286,9 @@ export default App;
 To reverse the order you can use the ```array.reverse()``` method  ```	<CardList todos={this.state.todos.reverse()} />```
 
 At this stage the completed prop will not work as it is a boolean and more work needs to be done. 
+
+At this stage I changed the styling
+
+In the card.js component, run a conditional rendering in the jsx-tag ```<li className="bg-blue pa1">{completed ? 'done' : 'to-do'}</li>```
+
+Complete styling as preferred. 

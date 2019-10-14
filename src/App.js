@@ -6,14 +6,7 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			todos: [
-				{
-					userId: '',
-					title: '',
-					id: '',
-					completed: true
-				}
-			]
+			todos: []
 		};
 	}
 
@@ -30,8 +23,10 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>To Do App</h1>
-				<CardList todos={this.state.todos.reverse()} />
+				<h1 className="bg-yellow pa1">EUROSTAR's To Do App</h1>
+				<div className="ToDos">
+					<CardList className="List" todos={this.state.todos.reverse()} />
+				</div>
 			</div>
 		);
 	}
