@@ -280,5 +280,6 @@ render() {
 }
 export default App;
 ```
+To reverse the order you can use the ```array.reverse()``` method  ```	<CardList todos={this.state.todos.reverse()} />```
 
-At this stage the completed prop will not work as it is a boolean and more work needs to be done. Change some of the styling quickly - smaller fonts, items as unordered lists. Retain the boxes and background until next step do some final styling at the end.
+At this stage the completed prop will not work as it is a boolean and more work needs to be done. 

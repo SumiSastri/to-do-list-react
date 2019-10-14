@@ -6,7 +6,14 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			todos: []
+			todos: [
+				{
+					userId: '',
+					title: '',
+					id: '',
+					completed: true
+				}
+			]
 		};
 	}
 
@@ -16,7 +23,7 @@ class App extends Component {
 			.then((todos) => {
 				// console.log(todos);
 				this.setState({ todos: todos });
-				// console.log(this.state);
+				console.log(this.state);
 			})
 			.catch((error) => console.log(error));
 	}
