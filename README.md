@@ -118,10 +118,11 @@ For this app there is a card file - that will display one to-do
 There is a card list file that will map through the data and display all the to-dos
 As the card list is the parent of card, create a card component first and display a simple message
 Create the card list and pass the card component into it
-Import the card list into App.js and ensure you have a simple singla app display on the front end.
+Import the card list into App.js and ensure you have a simple single page app display on the front end.
 
 Back-end:
 Set up your node data and node module export
+
 ```
 module.exports = function getTodos() {
 	return [
@@ -131,8 +132,10 @@ module.exports = function getTodos() {
       title: "delectus aut autem",
       completed: false
     },
-    ```
+```
+
 Test the express server with documentation recommendations from express
+
 ```
 const express = require('express');
 const app = express();
@@ -199,4 +202,6 @@ In the front-end go to app.js and set up your componentDidMount and check that t
 			.catch((error) => console.log(error));
 	}
 ```
-Now work on the front-end and render data
+Uncomment the console log when you see the data in the console and set state.
+
+Work on the front-end to display the data.
