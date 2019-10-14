@@ -24,7 +24,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<h1>To Do App</h1>
-				<CardList todos={this.state.todos} />
+				<CardList todos={this.state.todos.reverse()} />
 			</div>
 		);
 	}
