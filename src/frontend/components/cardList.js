@@ -4,19 +4,16 @@ import Card from './card.js';
 const CardList = ({ todos }) => {
 	return (
 		<div>
-			{todos.map((todos, i) => {
-				return (
-					<Card
-						key={i}
-						id={todos[i].id}
-						title={todos[i].title}
-						userId={todos[i].userId}
-						completed={todos[i].completed}
-					/>
-				);
-			})}
+			<Card />
 		</div>
 	);
 };
 
 export default CardList;
+
+// {todos.map((todos, i) => {
+// key={i}
+// id={todos[0].id}
+// title={todos[0].title}
+// userId={todos[0].userId}
+// completed={todos[0].completed}

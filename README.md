@@ -161,7 +161,7 @@ app.get('/api/todos', (req, res) => res.send(getTodos()));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 ```
 
-Connect the backend and front-end routes - update package json, set up a proxy route but do note change the express file 
+Connect the backend and front-end routes - update package json, set up a proxy route but do not change the express file 
 
 ```
 "scripts": {
@@ -205,3 +205,21 @@ In the front-end go to app.js and set up your componentDidMount and check that t
 Uncomment the console log when you see the data in the console and set state.
 
 Work on the front-end to display the data.
+
+Hard-code the card component to style - use tachyons to quickly see what it looks like
+
+```
+import React from 'react';
+const Card = () => {
+	return (
+		<div className="dib pa5 ma1 tc ba bw1 bg-light-blue">
+			<h2>Title</h2>
+			<p>userId</p>
+			<p>id</p>
+			<p>completed</p>
+		</div>
+	);
+};
+
+export default Card;
+```

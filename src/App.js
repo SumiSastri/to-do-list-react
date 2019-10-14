@@ -11,11 +11,12 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3000/api/todos')
+		fetch('http://localhost:3000/api/todos/')
 			.then((res) => res.json())
 			.then((todos) => {
 				// console.log(todos);
-				this.setState({ todos });
+				this.setState({ todos: todos });
+				console.log(this.state);
 			})
 			.catch((error) => console.log(error));
 	}
