@@ -1,4 +1,4 @@
-### To do list for EUROSTAR test
+### To do list with React-Node-Express
 
 An app that connects back-end data via an API to a React front-end
 ![Eurostar-todo-list](src/frontend/assets/app-complete.png)
